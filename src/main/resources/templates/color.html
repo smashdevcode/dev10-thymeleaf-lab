@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
 </head>
-<body>
+<!--<body th:styleappend="|background-color: ${color}|">-->
+<body style="color: red;" th:style="'background-color: ' + ${color}">
 <div class="container">
     <h1>Set Color</h1>
 
@@ -28,8 +29,8 @@
         <a href="/" class="button">Home</a>
     </div>
 </div>
-<script th:if="${color != null}">
-document.body.style.backgroundColor = '[[${color}]]';
-</script>>
+<!--<script th:if="${color != null}">-->
+<!--document.body.style.backgroundColor = '[[${color}]]';-->
+<!--</script>>-->
 </body>
 </html>
